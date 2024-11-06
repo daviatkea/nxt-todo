@@ -2,20 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: system-ui;
+}
+
+button {
+  @apply p-1 px-2 rounded-lg bg-gray-300 inline-block;
+}
+
+.primary {
+  @apply bg-purple-700 text-white font-bold
+}
+
+input {
+  @apply p-1 px-2 rounded-lg inline-block border border-gray-300;
+}
+
+h2 {
+  @apply text-2xl font-bold;
+}
+
+section {
+  @apply m-10 grid justify-start
+}
+
+form {
+  @apply grid gap-1 mb-2
+}
+
+.list {
+  @apply p-4 outline grid gap-4 mb-4
+}
+
+.list ul {
+  @apply grid gap-2
+}
+
+article {
+  @apply flex gap-2 items-center
 }
